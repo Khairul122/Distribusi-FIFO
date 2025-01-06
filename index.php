@@ -33,7 +33,7 @@ session_start();
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <img src="./assets/img/Logo Kota Medan.png" alt="Logo" style="height: 200px; display: block; margin: 0 auto;" class="mt-2" />
+                        <img src="./assets/img/logo.jpg" alt="Logo" style="height: 200px; display: block; margin: 0 auto;" class="mt-2" />
                         <h1 class="text-center">LOGIN</h1>
                         <form action="proses/login.php" method="POST">
                             <div class="form-group">
