@@ -372,13 +372,10 @@ header("Pragma: no-cache");
                 buatKopSurat: () => {
                     return `
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <img src="/assets/img/logo.png" style="width: 100px; margin-bottom: 10px;">
+                    <img src="../assets/img/logo.jpg" alt="Logo" style="width: 100px; height: 100px;">
                     <h2 style="margin: 0; text-transform: uppercase;">DINAS DKUKMP KABUPATEN TANAH DATAR</h2>
                     <p style="margin: 5px 0; font-size: 14px;">
-                        Jl. Raya Padang Panjang-Batusangkar KM.7 Kec.Lima Kaum
-                    </p>
-                    <p style="margin: 0; font-size: 14px;">
-                        Telp: (0752) 574356 Email: diskopukm@tanahdatar.go.id
+                       Jalan Prof Muhammad Yamin, Baringin, Kec. Lima Kaum, Kabupaten Tanah Datar, Sumatera Barat 27781
                     </p>
                 </div>
                 <hr style="border: 2px solid black; margin-bottom: 20px;">
