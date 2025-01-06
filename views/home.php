@@ -90,15 +90,15 @@ header("Pragma: no-cache");
 <body class="sb-nav-fixed">
     <?php
     // Query untuk mengambil data pengeluaran terbaru
-    $queryPengeluaranTerbaru = "SELECT p.*, o.nama_obat, p.tujuan
+    $queryPengeluaranTerbaru = "SELECT p.*, o.nama_barang, p.tujuan
                                 FROM pengeluaran p
-                                INNER JOIN obat o ON p.id_obat = o.id_obat
+                                INNER JOIN obat o ON p.id_barang = o.id_barang
                                 ORDER BY p.tanggal_keluar DESC
                                 LIMIT 5";
     $resultPengeluaranTerbaru = mysqli_query($koneksi, $queryPengeluaranTerbaru);
 
     // Query untuk mengambil obat dengan tanggal kadaluarsa dalam 14 hari ke depan
-    $queryKadaluwarsaTerdekat = "SELECT nama_obat, jumlah_stock, tanggal_kadaluarsa
+    $queryKadaluwarsaTerdekat = "SELECT nama_barang, jumlah_stock, tanggal_kadaluarsa
                                  FROM obat
                                  WHERE tanggal_kadaluarsa BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 14 DAY)
                                  ORDER BY tanggal_kadaluarsa ASC";
@@ -162,7 +162,7 @@ header("Pragma: no-cache");
                                 <ul class="list-group">
                                     <?php while ($dataPengeluaran = mysqli_fetch_assoc($resultPengeluaranTerbaru)): ?>
                                         <li class="list-group-item">
-                                            <?= $dataPengeluaran['tanggal_keluar']; ?> - <?= $dataPengeluaran['nama_obat']; ?> - <?= $dataPengeluaran['tujuan']; ?>
+                                            <?= $dataPengeluaran['tanggal_keluar']; ?> - <?= $dataPengeluaran['nama_barang']; ?> - <?= $dataPengeluaran['tujuan']; ?>
                                         </li>
                                     <?php endwhile; ?>
                                 </ul>
@@ -180,7 +180,7 @@ header("Pragma: no-cache");
                                 <ul class="list-group">
                                     <?php while ($dataKadaluwarsaTerdekat = mysqli_fetch_assoc($resultKadaluwarsaTerdekat)): ?>
                                         <li class="list-group-item">
-                                            <?= $dataKadaluwarsaTerdekat['nama_obat']; ?> - Jumlah Stok: <?= $dataKadaluwarsaTerdekat['jumlah_stock']; ?> - Kadaluarsa: <?= $dataKadaluwarsaTerdekat['tanggal_kadaluarsa']; ?>
+                                            <?= $dataKadaluwarsaTerdekat['nama_barang']; ?> - Jumlah Stok: <?= $dataKadaluwarsaTerdekat['jumlah_stock']; ?> - Kadaluarsa: <?= $dataKadaluwarsaTerdekat['tanggal_kadaluarsa']; ?>
                                         </li>
                                     <?php endwhile; ?>
                                 </ul>
@@ -199,12 +199,12 @@ header("Pragma: no-cache");
                             <div class="card-body">
                                 <ul class="list-group">
                                     <?php
-                                    $queryStokTerendah = "SELECT nama_obat, jumlah_stock FROM stock WHERE jumlah_stock <= 5";
+                                    $queryStokTerendah = "SELECT nama_barang, jumlah_stock FROM stock WHERE jumlah_stock <= 5";
                                     $resultStokTerendah = mysqli_query($koneksi, $queryStokTerendah);
 
                                     while ($dataStokTerendah = mysqli_fetch_assoc($resultStokTerendah)): ?>
                                         <li class="list-group-item">
-                                            <?= $dataStokTerendah['nama_obat']; ?> - Jumlah Stok: <?= $dataStokTerendah['jumlah_stock']; ?>
+                                            <?= $dataStokTerendah['nama_barang']; ?> - Jumlah Stok: <?= $dataStokTerendah['jumlah_stock']; ?>
                                             <span class="badge bg-warning text-dark">Stok Tersisa <?= $dataStokTerendah['jumlah_stock']; ?></span>
                                         </li>
                                     <?php endwhile; ?>

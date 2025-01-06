@@ -113,7 +113,7 @@ header("Pragma: no-cache");
                             <input type="hidden" name="id" value="<?= $id ?>">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
-                                <input name="nama_obat" type="text" class="form-control id=exampleFormControlInput1" value="<?= $data['nama_obat'] ?>">
+                                <input name="nama_barang" type="text" class="form-control id=exampleFormControlInput1" value="<?= $data['nama_barang'] ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Satuan</label>

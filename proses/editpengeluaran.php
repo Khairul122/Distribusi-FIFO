@@ -6,7 +6,7 @@ $tujuan = $_POST['tujuan'];
 $harga = $_POST['harga'];
 $tanggal_keluar = $_POST['tanggal_keluar'];
 
-    // Perintah UPDATE dengan menggabungkan nama_obat yang diambil dari tabel obat
+    // Perintah UPDATE dengan menggabungkan nama_barang yang diambil dari tabel obat
     $query = "UPDATE pengeluaran SET              
                 tujuan = '$tujuan',
                 harga = '$harga',

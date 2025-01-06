@@ -153,8 +153,8 @@ header("Pragma: no-cache");
                                         // Tampilkan data sesuai kebutuhan
                                     ?>
                                         <tr>
-                                            <td><?= $data['id_obat'] ?></td>
-                                            <td><?= $data['nama_obat'] ?></td>
+                                            <td><?= $data['id_barang'] ?></td>
+                                            <td><?= $data['nama_barang'] ?></td>
                                             <td><?= $data['satuan'] ?></td>
                                             <td><?= $data['tujuan'] ?></td>
                                             <td><?= $data['harga'] ?></td>

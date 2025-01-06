@@ -164,8 +164,8 @@ header("Pragma: no-cache");
                                         // Tampilkan data sesuai kebutuhan
                                     ?>
                                         <tr>
-                                            <td><?= $data['id_obat'] ?></td>
-                                            <td><?= $data['nama_obat'] ?></td>
+                                            <td><?= $data['id_barang'] ?></td>
+                                            <td><?= $data['nama_barang'] ?></td>
                                             <td><?= $data['jumlah_stock'] ?></td>
                                             <td><?= $data['tanggal_masuk'] ?></td>
                                             <td><?= $data['tanggal_kadaluarsa'] ?></td>
@@ -243,8 +243,8 @@ header("Pragma: no-cache");
                                         // Tampilkan data sesuai kebutuhan
                                     ?>
                                         <tr>
-                                            <td><?= $data['id_obat'] ?></td>
-                                            <td><?= $data['nama_obat'] ?></td>
+                                            <td><?= $data['id_barang'] ?></td>
+                                            <td><?= $data['nama_barang'] ?></td>
                                             <td><?= $data['tujuan'] ?></td>
                                             <td><?= $data['harga'] ?></td>
                                             <td><?= $data['tanggal_keluar'] ?></td>
@@ -282,7 +282,7 @@ header("Pragma: no-cache");
                                     ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
-                                            <td><?= $data['nama_obat'] ?></td>
+                                            <td><?= $data['nama_barang'] ?></td>
                                             <td><?= $data['jumlah_stock'] ?></td>
                                         </tr>
                                     <?php

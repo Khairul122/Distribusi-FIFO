@@ -127,7 +127,7 @@ header("Pragma: no-cache");
                                     ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
-                                            <td><?= $data['nama_obat'] ?></td>
+                                            <td><?= $data['nama_barang'] ?></td>
                                             <td><?= $data['satuan'] ?></td>
                                             <td><?= $data['jumlah_stock'] ?></td>
                                             <td>
@@ -135,7 +135,7 @@ header("Pragma: no-cache");
                                                     <li><a href="./editstock.php?id=<?= $data['id'] ?>" class="btn btn-success">Edit</a></li>
                                                     <li>
                                                         <form action="../proses/deletestock.php" method="post">
-                                                            <input type="hidden" name="nama_obat" value="<?= $data['nama_obat'] ?>">
+                                                            <input type="hidden" name="nama_barang" value="<?= $data['nama_barang'] ?>">
                                                             <button class="btn btn-danger text-light">Delete</button>
                                                         </form>
                                                     </li>

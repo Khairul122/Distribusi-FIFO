@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 05, 2025 at 04:38 AM
+-- Generation Time: Jan 06, 2025 at 10:02 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.1
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `obat` (
   `id` int NOT NULL,
-  `id_obat` varchar(25) NOT NULL,
-  `nama_obat` varchar(50) NOT NULL,
+  `id_obat` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `nama_obat` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `satuan` varchar(50) NOT NULL,
   `jumlah_stock` int NOT NULL,
   `harga` decimal(65,0) NOT NULL,

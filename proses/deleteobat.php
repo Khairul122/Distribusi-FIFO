@@ -4,11 +4,11 @@
     $id = $_POST['id'];
 
     // Dapatkan nama obat dan jumlah_stock yang akan dihapus
-    $query_obat = "SELECT nama_obat, jumlah_stock FROM obat WHERE id = '$id'";
+    $query_obat = "SELECT nama_barang, jumlah_stock FROM obat WHERE id = '$id'";
     $result_obat = mysqli_query($koneksi, $query_obat);
 
     if ($row_obat = mysqli_fetch_assoc($result_obat)) {
-        $nama_obat = $row_obat['nama_obat'];
+        $nama_barang = $row_obat['nama_barang'];
         $jumlah_stock_hapus = $row_obat['jumlah_stock'];
 
         // Hapus data obat berdasarkan id
@@ -17,7 +17,7 @@
 
         if ($result_delete_obat) {
             // Kurangkan jumlah_stock pada tabel stock berdasarkan nama obat dan jumlah_stock yang dihapus
-            $query_stock = "UPDATE stock SET jumlah_stock = jumlah_stock - $jumlah_stock_hapus WHERE nama_obat = '$nama_obat'";
+            $query_stock = "UPDATE stock SET jumlah_stock = jumlah_stock - $jumlah_stock_hapus WHERE nama_barang = '$nama_barang'";
             mysqli_query($koneksi, $query_stock);
 
             header('location: ../views/obat.php');

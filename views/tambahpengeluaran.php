@@ -105,16 +105,16 @@ header("Pragma: no-cache");
                         <form enctype="multipart/form-data" action="../proses/tambahpengeluaran.php" method="post">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nama Barang</label>
-                                <select name="nama_obat" class="form-control" id="exampleFormControlSelect1">
+                                <select name="nama_barang" class="form-control" id="exampleFormControlSelect1">
                                     <?php
                                     // Mengambil daftar Nama Obat dari tabel obat
-                                    $query_obat = "SELECT nama_obat FROM obat";
+                                    $query_obat = "SELECT nama_barang FROM obat";
                                     $result_obat = mysqli_query($koneksi, $query_obat);
 
                                     // Menampilkan setiap Nama Obat sebagai pilihan dropdown
                                     while ($row_obat = mysqli_fetch_assoc($result_obat)) {
-                                        $nama_obat = $row_obat['nama_obat'];
-                                        echo "<option value=\"$nama_obat\">$nama_obat</option>";
+                                        $nama_barang = $row_obat['nama_barang'];
+                                        echo "<option value=\"$nama_barang\">$nama_barang</option>";
                                     }
                                     ?>
                                 </select>
